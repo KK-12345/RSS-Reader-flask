@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSS Detail</title>
+    <style type="text/css">
+        .title {
+            font-weight: bold;
+            border-style: double;
+            border-width: 3px;
+          }
+          .bold{ font-weight:bold;}
+    </style>
+</head>
+<body>
+    <div>
+        {% for entry in entries %}
+            <span class="title">Title: {{ entry.title }}</span><br>
+            <span class="bold">Feed: </span><a href="{{ entry.link }}" target="_blank">{{ entry.link }}</a><br>
+            <span class="bold">Website: </span>{{ entry.website }}<br>
+            <span class="bold">Summary: </span>{{ entry.summary }}<br><br>
+        {% endfor %}
+    </div>
+</body>
+</html>
